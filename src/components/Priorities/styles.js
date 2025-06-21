@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.section`
   padding: 2rem;
@@ -32,4 +33,9 @@ export const Tasks = styled.div`
   gap: 1rem;
   padding: 1.5rem;
   flex-wrap: wrap;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
