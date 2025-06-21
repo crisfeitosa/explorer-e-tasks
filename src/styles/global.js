@@ -1,10 +1,19 @@
 import { createGlobalStyle } from "styled-components";
+import { DEVICE_BREAKPOINTS } from "./deviceBreakpoints";
 
 export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  :root {
+    font-size: 1rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      font-size: 0.75rem;
+    }
   }
 
   body {
@@ -16,7 +25,7 @@ export default createGlobalStyle`
 
   body, input, button, textarea {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     outline: none;
   }
 
@@ -34,7 +43,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 0.5rem;
   }
   
   ::-webkit-scrollbar-track {
