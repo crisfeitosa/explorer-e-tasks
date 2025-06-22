@@ -13,6 +13,8 @@ export const Container = styled.aside`
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
     grid-area: none;
     display: none;
+    position: absolute;
+    z-index: 1;
   }
 `;
 
@@ -78,8 +80,8 @@ export const Footer = styled.footer`
 `;
 
 export const Button = styled.button`
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 
   > svg {
     font-size: 1.25rem;
