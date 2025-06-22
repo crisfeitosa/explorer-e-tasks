@@ -12,13 +12,14 @@ export const Container = styled.aside`
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
     grid-area: none;
-    display: none;
     position: absolute;
     z-index: 1;
-    display: none;
+    
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
 
     &[data-menu-is-open="true"] {
-      display: block;
+      transform: translateX(0);
     }
   }
 `;
